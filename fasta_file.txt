@@ -1,0 +1,8 @@
+>id1 description of idl
+ATGTGTGTCCGTTGTGTAA
+AGTGTGTCcccgtgttATg
+gtagatttttga
+>id2 description of id2
+ccccagtggggagtagggc
+AAAcgtatAA
+

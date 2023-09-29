@@ -1,0 +1,93 @@
+Next, we'll talk about communicating
+with the outside or, in other words, reading our data from files instead
+of requiring someone to type it in. Most of the time when you're
+doing genomic data science or any kind of data analysis, you're not
+actually typing in data at the terminal or asking someone else to input the data
+while your program is running. Usually, our data sets
+are far too big to do that. So we read our data from files
+which might be very large files. So let's go through, today we'll talk about how to go
+through data that comes from a file. To do that we need to open the file,
+do something to the file and then close the file. It's pretty simple. So to open a file, to read or
+write to the file, we use the built-in function
+in Python called open. So let's look at an example. To read from a file, we would just call
+the file, say f, okay, very simple name. We say f=open('myfile'), and where myfile would be the name
+of the file in your file system. And we would give it the string r in
+single quotes, just the letter r, which says I'm going to open this file and
+read from it. So r is the default mode,
+default value for the open function, so we don't have to include that. We can just say f equals open my file. If we want to write to a file
+though that's not the default. So we would say we could say f equals open
+my file and provide the second argument function the letter w, which means
+we're going to write to this file. If we do that, then as soon as we
+start writing to the file we'll be creating a new version of this file,
+overriding anything that's already in it. Sometimes we don't want to do that
+because we have some big file. And suppose we want to just add to it. So we can open the file on a third way in
+append mode using the special character a as the argument to the open function. And a says we're going to append
+whatever we write to the file, get to the end of our existing file so
+we don't destroy what's already there. So if you attempt to open a file that
+does not exist Python's going to give you an error. So let's see what happens,
+we type f equals open my file. Myfile, let's say you typed it wrong or
+that file doesn't exist, Python's just going to give you an error. Now you don't really want that to
+happen in the middle of your program. But you can check before opening a file or
+when opening a file to see if it exists, looking at the special variable built
+into Python in the following way. We write try:, so that's a special
+command, try, f = open("myfile"). And if it doesn't work, then Python returns this special
+exception code called IOError. So we write except, that's also
+a special keyword, IOError where I, O, and E are all in capital letters. And after IOError we write colon and
+then print out an answer message. So what this special syntax
+does is it tries a function. Here it's trying out opening a file and
+if I get an error back from the operating system then Python is going to
+just print out a message. So instead of just crashing,
+it's going to print a message. And so it won't print an error message and instead now this time it will print
+out the file myfile does not exist. That's a little more useful than the error
+message that Python might give you. So now let's talk about
+reading from a file. So suppose that myfile contains two lines. The first line is called, it just says
+this is the first line of the file, and the second line says
+second line of the file. So this is a simple text file,
+it has two lines in it. So a simple and fast way to read the content of the file
+is to just loop over the object. So we've already opened the file, so
+now we can type for line in f, so this is a sort of special syntax of for. We're now iterating through this file
+object that we returned one line at a time and we can just print it out. So this syntax here this for loop here
+will simply go through the file and print out each line so
+you see here's the output which is just each line of the file
+printed out one at a time. You can also read the content of a file
+using the read method of the file object. So I can type f.read() which invokes
+the read method with no arguments. And it invokes that method on the file, f. Now, notice if I just typed
+it here in this sequence that it doesn't return anything. That's because we just
+finished reading that file, so that file object now points
+to the end of the file. There's nothing left to print,
+so when I try to read it, there's nothing left to read. So we can adjust that though. By using the special f.seek() function. So we can change our position
+within a file object. So after reading all the lines in
+a file we're at the end of it. Suppose we want to go back to
+the beginning and read it again. We can use the method seek on the file
+object f and tell it where to go. So to do that we could say f.seek(0) and
+that says go to a position zero, to the beginning of file. And that returns as you see returns
+the value zero signifying that we're at the beginning of the file. And now if I wanted to read
+the file again, using f.read(), I would actually get the entire file. So f.read() unlike
+the previous syntax doesn't go to the file a lot of the time but
+it actually reads the whole file. So what it returns here
+is the entire file, which you see is two lines
+including the new line characters. So you sometimes don't want to do that, you usually want to read
+just one line at a time. So I can use a special built-in
+method readline to read one line at a time as well. So I could say f.seek(0), that says
+go back to the beginning of the file. So now f.readline() will just
+read one line from the file and that returns the value of
+the first line of the file. Similarly I can write a line of the file,
+so here's our file with three lines in it. So if I used the write method that'll
+write the contents of a string to a file, returning the number of characters
+that it just wrote for Python 3.x or returns just none in Python 2.x. So let's open our file myfile in append
+mode so here's the command for that. F equals open. And then we get the full path to
+the filename and the character a, which says we're going to append to it. And now we do f.write() and
+give it the string. This is a third line. And in Python 3.x, which we're using here,
+that'll return 20, which is the number of
+characters we just wrote. And what happens is it just wrote
+that third line to our file. So now our file is one line longer
+than it was than it was before. Finally when you are done with
+a file you want to close it. So for that you use the close
+method with no arguments. We just call it f.close(). It closes the file and frees up any system
+resources taken up by the open file. In general if you forget to close
+a file at the end of your program, it'll be closed when the program exits. But it's a good programming practice to
+close it explicitly by calling f.close(). So if we called f.close(), and then we try
+to read the file again, the file f again, we would get an error, and
+that's because the file's no longer open. In the next lecture, we're going to talk
+about, we're going to show how to use these commands to actually read this
+file containing some DNA sequences and do something useful with it.
