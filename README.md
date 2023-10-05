@@ -7,28 +7,28 @@ A collection of python notebook files from a __Genomic data science__ course spl
 ## Module 1
 
 1. Basic Strings
-2. Manipulating-DNA-Strings
-3. Downloading Parsing a Genome
-4. Working with Sequencing
-5. Analysing reads by position
-6. Matching Artificial reads
-7. Matching Real Reads
+2. __Manipulating-DNA-Strings__.
+3. Downloading __Parsing a Genome__
+4. Working with __Sequencing__.
+5. __Analysing reads by position__.
+6. __Matching Artificial reads__.
+7. __Matching Real Reads__.
 
 ## Module 2 
 
-1. Boyer-Moore Algorithm
-2. K-Mer-Index Algorithm
-3. Pigeonhole-Principle Algorithm
+1. __Boyer-Moore__ Algorithm
+2. __K-Mer-Index__ Algorithm
+3. __Pigeonhole-Principle__ Algorithm
 
 ## Module 3
 
-1. Dynamic Programming for Edit Distance
-2. Global Alignment
-3. Overlaps between pairs of reads
-4. Finding and Representing all overlaps
+1. Dynamic Programming for __Edit Distance__.
+2. __Global Alignment__
+3. __Overlaps__ between __pairs of reads__
+4. __Finding__ and __Representing__ all __overlaps__.
 
 ## Module 4
 
-1. Shortest Common Superstring (SCS) Algorithm
-2. Greedy Shortest Common Superstring (GSCS) Algorithm
-3. Biulding a De-Bruijn Graph
+1. __Shortest Common Superstring (SCS)__ Algorithm
+2. __Greedy Shortest Common Superstring (GSCS)__ Algorithm
+3. Biulding a __De-Bruijn Graph__.
