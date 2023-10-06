@@ -32,3 +32,11 @@
     [12] "reads"              
     [13] "x"   
 
+## Image cell
+
+![Putin](https://github.com/samalkani/Bioinformatics-Python-files/assets/87494794/1238430a-ae19-428e-b8a8-05e39f3dc493)
+
+
+![Graph](https://github.com/samalkani/Bioinformatics-Python-files/assets/87494794/81cdb495-7a31-453c-8888-24eb56d3b1f7)
+
+
